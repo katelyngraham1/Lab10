@@ -5,7 +5,24 @@ import axios from 'axios';
 class Read extends Component
 {
 
+    constructor(){
+        super();
+        this.ReloadData = this.ReloadData.bind(this);
+    }
+
+    // Refresh
+    ReloadData(){
+        axios.get('http://localhost:4000/api/movies')
+        .then((response)=>{
+            this.setState({mymovies: response.data})
+        })
+        .catch((error)=>{
+            console.log(error);
+        });
+    }
+
     componentDidMount(){
+        // axios used to interact with api
         axios.get('http://localhost:4000/api/movies')
         .then((response)=>{
             this.setState({mymovies: response.data})
@@ -23,7 +40,7 @@ class Read extends Component
         return(
             <div>
                 <h1>This is my Read component!</h1>
-                <Movies films={this.state.mymovies}></Movies>
+                <Movies films={this.state.mymovies} ReloadData={this.ReloadData}></Movies>
             </div>
         );
     }

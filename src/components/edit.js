@@ -100,7 +100,7 @@ class Edit extends Component {
                     </div>
                     <div>
                         <input type="submit" value="Edit Movie"
-                            className="btn btn-primary"></input>
+                            className="btn btn-info"></input>
                     </div>
                 </form>
             </div>

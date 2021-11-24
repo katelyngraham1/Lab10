@@ -89,7 +89,7 @@ class Create extends Component {
                     </div>
                     <div>
                         <input type="submit" value="Add Movie"
-                            className="btn btn-primary"></input>
+                            className="btn btn-info"></input>
                     </div>
                 </form>
             </div>

@@ -22,7 +22,7 @@ class App extends Component {
     return (
       <Router>
       <div className="App">
-        <Navbar bg="primary" variant="dark">
+        <Navbar bg="info" variant="dark">
           <Container>
             <Navbar.Brand href="/">Navbar</Navbar.Brand>
             <Nav className="me-auto">
